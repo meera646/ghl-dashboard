@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Run the email fetch function as soon as the page is ready
     getEmailCount();
-});
+);
 
 // The new function to fetch GHL data from your Vercel API
 async function getEmailCount() {
