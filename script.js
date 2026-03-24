@@ -235,11 +235,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+ getEmailCount();
 
-
-    // Run the email fetch function as soon as the page is ready
-    getEmailCount();
-);
 
 // The new function to fetch GHL data from your Vercel API
 async function getEmailCount() {
@@ -255,6 +252,13 @@ async function getEmailCount() {
         if (emailDisplay) {
             emailDisplay.innerText = data.count || "0";
         }
+    }
+    catch (error) {
+        console.error("Error fetching email count:", error);
+    }
+}
+
+  
     } catch (error) {
         console.error("Error fetching email stats:", error);
     }
